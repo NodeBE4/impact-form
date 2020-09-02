@@ -19,5 +19,18 @@
     </form>
     </div>
   </div>
+
+<div style="max-width: 500px;border: 1px;background-color: #95A5A6;color: white">
+  <p>投票</p>
+    <div style="max-width: 500px;">
+    <form action="/api/vote" method="post">
+      <div style="width:100%; display:table">
+        <label style="display:table-cell;width=1px;">hash:</label><input name="hash" type="text" placeholder="全名 如:李文亮" style="display:table-cell; width:100%">
+      </div>
+      <div><input type="submit" value="提交"/></div>
+    </form>
+    </div>
+  </div>
+
   </body>
 </html>

@@ -1,7 +1,6 @@
-if (process.env.DEBUG) {
-   require('dotenv').config();
-}
 const { Octokit } = require("@octokit/rest")
+
+require('dotenv').config()
 
 let TOKEN = process.env.TOKEN
 let REPOSITORY = process.env.REPOSITORY
