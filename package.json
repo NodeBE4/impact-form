@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/duty-machine/duty-machine-form#readme",
   "dependencies": {
-    "@octokit/rest": "^17.11.0"
+    "@octokit/rest": "^17.11.0",
+    "dotenv": "^8.2.0"
   }
 }
