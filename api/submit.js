@@ -11,9 +11,9 @@ let [owner, repo] = REPOSITORY.split('/')
 module.exports = async (req, res) => {
   let params = req.body
   console.log(params)
-  let name = params['name']
-  let keyword = params['keyword']
-  let message = params['message']
+  let name = params['name'].trim()
+  let keyword = params['keyword'].trim()
+  let message = params['message'].trim()
   let url = process_url(params['url'])
   if (url==null){
     res.status(402).send('illegal url')
