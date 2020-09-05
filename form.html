@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+<div style="max-width: 500px;border: 1px;background-color: #95A5A6;color: white">
+    <p>请在此处键入你心中的英雄。</p>
+    <p>提交后将会跳转到抓取后的文章地址。抓取过程需要数分钟，请耐心等候。</p>
+    <div style="max-width: 500px;">
+    <form action="/api/submit" method="post">
+      <div style="width:100%; display:table">
+        <label style="display:table-cell;width=1px;">姓名:</label><input name="name" type="text" placeholder="全名 如:李文亮" style="display:table-cell; width:100%">
+        <label style="display:table-cell;width=1px;">区别词:</label><input name="keyword" type="text" placeholder="职业、案子 区别同姓名者 如:医生" style="display:table-cell; width:100%">
+        </div>
+      <div style="width:100%; display:table"><label style="display:table-cell;width=1px;">维基百科链接: </label><input name="url" type="url" placeholder="https://zh.wikipedia.org/..." style="display:table-cell; width:100%"><br></div>
+      <div><textarea name="message" style="width: 100%; max-width: 600px; height: 100px;" placeholder="随便说点什么，不影响机器人工作..."></textarea></div>
+      <div><input type="submit" value="提交"/></div>
+    </form>
+    </div>
+  </div>
+
+<div style="max-width: 500px;border: 1px;background-color: #95A5A6;color: white">
+  <p>投票</p>
+    <div style="max-width: 500px;">
+    <form action="/api/vote" method="post">
+      <div style="width:100%; display:table">
+        <label style="display:table-cell;width=1px;">hash:</label><input name="hash" type="text" placeholder="全名 如:李文亮" style="display:table-cell; width:100%">
+      </div>
+      <div><input type="submit" value="提交"/></div>
+    </form>
+    </div>
+  </div>
+
+  </body>
+</html>
