@@ -49,7 +49,9 @@ module.exports = async (req, res) => {
 
   await new Promise(resolve => setTimeout(resolve, 1000))
 
-  res.setHeader('Location', "https://nodebe4.github.io/hero")
+  console.log(req.session.fromUrl)
+
+  res.setHeader('Location', req.session.fromUrl)
   res.status(200).send('已收到，謝謝您的贊！')
   
 }
