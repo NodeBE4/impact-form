@@ -49,9 +49,9 @@ module.exports = async (req, res) => {
 
   await new Promise(resolve => setTimeout(resolve, 1000))
 
-  console.log(req.session.fromUrl)
+  console.log(req.originalUrl)
 
-  res.setHeader('Location', req.session.fromUrl)
+  res.setHeader('Location', req.originalUrl)
   res.status(200).send('已收到，謝謝您的贊！')
   
 }
