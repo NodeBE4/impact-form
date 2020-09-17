@@ -10,8 +10,6 @@ let [owner, repo] = REPOSITORY.split('/')
 module.exports = async (req, res) => {
   let params = req.body
   console.log(params)
-  let name = params['name'].trim()
-  let keyword = params['keyword'].trim()
   let message = params['message'].trim()
   let url = process_url(params['url'])
   if (url==null){
@@ -24,7 +22,7 @@ ${message}
 
   `
 
-  let title = `add_request: ${name}-${keyword}`
+  let title = `add_request`
 
   let octokit = new Octokit({ auth: TOKEN })
   let response = await octokit.issues.create({
@@ -47,12 +45,10 @@ function process_url(url){
   let parts = url.split("://")
   let urlbody = parts[1].split('/')
   urlbody[0] = urlbody[0].toLowerCase() 
-  if (urlbody[0] == 'zh.wikipedia.org'){
-    urlbody[1] = 'wiki'
+  if (urlbody[0] == 'github.com'){
     newurl = urlbody.join('/')
     newurl = newurl.split("#")[0]
-  }else if (urlbody[0] == 'en.wikipedia.org'){
-    urlbody[1] = 'wiki'
+  }else if (urlbody[0] == 'gitlab.com'){
     newurl = urlbody.join('/')
     newurl = newurl.split("#")[0]
   }else{

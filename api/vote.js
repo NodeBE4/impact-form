@@ -49,7 +49,7 @@ module.exports = async (req, res) => {
 
   await new Promise(resolve => setTimeout(resolve, 1000))
 
-  res.setHeader('Location', "https://hero-form.vercel.app/vote.html")
+  res.setHeader('Location', "https://impact-form.vercel.app/vote.html")
   res.status(200).send('已收到，謝謝您的贊！')
   
 }
